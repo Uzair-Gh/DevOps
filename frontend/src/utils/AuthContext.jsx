@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   const checkAuth = async () => {
     try {
       const response = await fetch(
-        `https://puterbench-backend.onrender.com/user/refresh`,
+        `http://34.239.121.154/api/user/refresh`,
         {
           method: "GET",
           credentials: "include",
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const response = await fetch(
-        `https://puterbench-backend.onrender.com/user/signin`,
+        `http://34.239.121.154/user/api/signin`,
         {
           method: "POST",
           headers: {
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (name, email, password) => {
     try {
       const response = await fetch(
-        `https://puterbench-backend.onrender.com/user/signup`,
+        `http://34.239.121.154/api/user/signup`,
         {
           method: "POST",
           headers: {
@@ -103,7 +103,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       const response = await fetch(
-        `https://puterbench-backend.onrender.com/user/logout`,
+        `http://34.239.121.154/api/user/logout`,
         {
           method: "POST",
           credentials: "include",
